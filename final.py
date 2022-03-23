@@ -15,13 +15,12 @@ from itertools import combinations
 import sympy as sp
 from sympy import *
 
-WHETHER_TRAIN = False
-PANOLA1500 = False
+WHETHER_TRAIN = True
 ONLYBEST = True
+HOME_DIR = "./test"
+
 best_models = ['7a', '7b', '9a', '11a', '11c', '14a','14b']
-DAVIS5000 = False
-DAVIS9091 = False
-DAVIS20 = False
+
 
 
 varia_dict = {
@@ -94,7 +93,7 @@ for variables, iteration_sym in zip(res,range(len(res))):
         testing_locs = [loc for loc in location_list if loc not in training_locs ]
         # ['sct1','sct2','sct3','sct5']
         # ['sct1' ,'sct2','sct3','sct5','davis']
-        HOME_DIR = "/Volumes/GoogleDrive/My Drive/Research/2_Collaboration/Chacha_Chen/Files_from_Chacha/INSPIRE_project/best_models"
+        
         PATH = os.path.join(HOME_DIR,'iter_{0}'.format(iteration_symbol))
         if not os.path.exists(PATH):
             os.mkdir(PATH)
@@ -107,7 +106,7 @@ for variables, iteration_sym in zip(res,range(len(res))):
             return A
 
         ## data initialiåtion
-        data = pd.read_csv('/Volumes/GoogleDrive/My Drive/Research/2_Collaboration/Chacha_Chen/Files_from_Chacha/INSPIRE_project/data/all_data-new.csv')
+        data = pd.read_csv('./data/all_data.csv')
         # variable_list = ['age','MAT','precipitation','erosion','quartz','albite'] ##t,T,P,E,q,a
 
 
@@ -225,18 +224,7 @@ for variables, iteration_sym in zip(res,range(len(res))):
             print("testing on {0}".format(loc))
             data_tmp = data[data['location']==loc]
             depth_batch_test = np.array(data_tmp['depth']).reshape(data_tmp['depth'].shape[0],1)
-            if PANOLA1500:
-                if loc == 'Panola':
-                    data_tmp['age'] = 1500
-            if DAVIS5000:
-                if loc == 'Davis':
-                    data_tmp['age'] = 5000
-            if DAVIS9091:
-                if loc == 'Davis':
-                    data_tmp['age'] = 9091
-            if DAVIS20:
-                if loc == 'Davis':
-                    data_tmp['age'] = 20
+
 
             # Z_batch = np.array(data[['age','MAT']]).reshape(data['age'].shape[0],2)
             Z_batch_test = np.array(data_tmp[variables]).reshape(data_tmp['age'].shape[0], NUM_VARIABLE)
@@ -318,39 +306,6 @@ for variables, iteration_sym in zip(res,range(len(res))):
             plt.ylabel('Depth (m)', fontsize=20)
             plt.legend(fontsize=20)
             plt.tight_layout()
-            if PANOLA1500:
-                if loc == 'Panola':
-                    plt.savefig(os.path.join(PATH,'fig_{0}_{1}_age=1500.pdf'.format(loc,iteration_symbol)), bbox_inches='tight')
-                    plt.clf()
-                    plt.close()
-                else:
-                    plt.clf()
-                    plt.close()
-            if DAVIS9091:
-                if loc == 'Davis':
-                    plt.savefig(os.path.join(PATH,'fig_{0}_{1}_age=9091.pdf'.format(loc,iteration_symbol)), bbox_inches='tight')
-                    plt.clf()
-                    plt.close()
-                else:
-                    plt.clf()
-                    plt.close()
-            if DAVIS5000:
-                if loc == 'Davis':
-                    plt.savefig(os.path.join(PATH,'fig_{0}_{1}_age=5000.pdf'.format(loc,iteration_symbol)), bbox_inches='tight')
-                    plt.clf()
-                    plt.close()
-                else:
-                    plt.clf()
-                    plt.close()
-
-            if DAVIS20:
-                if loc == 'Davis':
-                    plt.savefig(os.path.join(PATH,'fig_{0}_{1}_age=20.pdf'.format(loc,iteration_symbol)), bbox_inches='tight')
-                    plt.clf()
-                    plt.close()
-                else:
-                    plt.clf()
-                    plt.close()
 
             plt.savefig(os.path.join(PATH,'fig_{0}_{1}.pdf'.format(loc,iteration_symbol)), bbox_inches='tight')
             plt.clf()
@@ -360,4 +315,4 @@ for variables, iteration_sym in zip(res,range(len(res))):
 # print(total_summary)
 total_summary = pd.DataFrame(total_summary)
 
-#total_summary.to_csv(os.path.join(HOME_DIR,'total_results_davis_20.csv'),sep=';',index=False)
+total_summary.to_csv(os.path.join(HOME_DIR,'total_results.csv'),sep=';',index=False)

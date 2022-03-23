@@ -1,0 +1,23 @@
+iteration;function;Targetted Soil(s);Hybrid Model MSE;Physics-based Model MSE;f(z) (hybrid model);gk (physics)
+7a. f(t,T) fit to SCT1 SCT2 SCT3 SCT5 Panola.;f(t,T);SCT1 SCT2 SCT3 SCT5 Panola;0.003290723;[0.0032918856];-;-
+7a. f(t,T) test on Davis.;f(t,T);Davis;0.17546277;0.0010289623;1.211969;0.583
+7a. f(t,T) test on Jughandle.;f(t,T);Jughandle;0.022625748;0.015380067;1.1086184;0.88368
+7b. f(t,T) fit to SCT1 SCT2 SCT3 SCT5 Davis.;f(t,T);SCT1 SCT2 SCT3 SCT5 Davis;0.0029748206;[0.0029752946];-;-
+7b. f(t,T) test on Panola.;f(t,T);Panola;0.17278214;0.0038426542;0.6563792;1.21
+7b. f(t,T) test on Jughandle.;f(t,T);Jughandle;0.015437181;0.015380067;0.880795;0.88368
+9a. f(t,E) fit to SCT1 SCT2 SCT3 SCT5 Panola.;f(t,E);SCT1 SCT2 SCT3 SCT5 Panola;0.0032907054;[0.0032918856];-;-
+9a. f(t,E) test on Davis.;f(t,E);Davis;0.026247421;0.0010289623;0.71104234;0.583
+9a. f(t,E) test on Jughandle.;f(t,E);Jughandle;0.02572562;0.015380067;0.71064615;0.88368
+11a. f(t,A) fit to SCT1 SCT2 SCT3 SCT5 Panola.;f(t,A);SCT1 SCT2 SCT3 SCT5 Panola;0.0032907012;[0.0032918856];-;-
+11a. f(t,A) test on Davis.;f(t,A);Davis;0.17549174;0.0010289623;1.212257;0.583
+11a. f(t,A) test on Jughandle.;f(t,A);Jughandle;0.018964183;0.015380067;1.0548743;0.88368
+11c. f(t,A) fit to SCT1 SCT2 SCT3 SCT5.;f(t,A);SCT1 SCT2 SCT3 SCT5;0.0031326064;[0.0031331053];-;-
+11c. f(t,A) test on Panola.;f(t,A);Panola;0.16414297;0.0038426542;0.731487;1.21
+11c. f(t,A) test on Davis.;f(t,A);Davis;0.033794012;0.0010289623;0.731487;0.583
+11c. f(t,A) test on Jughandle.;f(t,A);Jughandle;0.023860604;0.015380067;0.7307684;0.88368
+14a. f(T,Q) fit to SCT1 SCT2 SCT3 SCT5 Panola.;f(T,Q);SCT1 SCT2 SCT3 SCT5 Panola;0.003305029;[0.0032918856];-;-
+14a. f(T,Q) test on Davis.;f(T,Q);Davis;0.2718925;0.0010289623;-0.0626948;0.583
+14a. f(T,Q) test on Jughandle.;f(T,Q);Jughandle;0.06574162;0.015380067;0.31476152;0.88368
+14b. f(T,Q) fit to SCT1 SCT2 SCT3 SCT5 Davis.;f(T,Q);SCT1 SCT2 SCT3 SCT5 Davis;0.0029753277;[0.0029752946];-;-
+14b. f(T,Q) test on Panola.;f(T,Q);Panola;0.13117431;0.0038426542;2.1706645;1.21
+14b. f(T,Q) test on Jughandle.;f(T,Q);Jughandle;0.03635805;0.015380067;0.61298144;0.88368
