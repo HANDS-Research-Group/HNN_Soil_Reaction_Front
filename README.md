@@ -25,7 +25,7 @@ ONLYBEST = True       ## Only train/test the best performance models ['7a', '7b'
 HOME_DIR = "./test"   ## Define the directory where result will be saved.
 ```
 
-3. Run the finaly.py script.
+2. Run the finaly.py script.
 
 ```
 python final.py
