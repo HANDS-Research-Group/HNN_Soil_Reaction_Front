@@ -31,5 +31,5 @@ HOME_DIR = "./test"   ## Define the directory where result will be saved.
 python final.py
 ```
 
-## Data
-Data is saved in data/all_data.csv
+## Input Data
+Input data is saved in data/all_data.csv
