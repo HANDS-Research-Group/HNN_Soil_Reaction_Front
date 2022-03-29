@@ -1,6 +1,6 @@
-# HNN_Soil_Reaction_Front
+# Predicting Soil Reaction Front Using Hybrid Neural Network
 
-This repo contains source codes, input data, and example output for the hybrid neural network proposed in the article Wen et al. (XXXX), which targets at improving the accuracy of physics-based model in simulating soil reaction front using the neural network.
+This repo contains source codes, input data, and an example output for the hybrid neural network proposed in the article Wen et al. (XXXX), which targets improving the accuracy of a physics-based model in simulating soil reaction front using the neural network.
 
 #### Reference
 Wen, T., Chen, C., Zheng, G., Bandstra, J., and Brantley, S.L. (XXXX). Using a Neural Network – Physics-based Hybrid Model to Predict Soil Reaction Fronts. _Under Revision_, https://doi.org/XXXXXXX
@@ -10,7 +10,7 @@ Wen, T., Chen, C., Zheng, G., Bandstra, J., and Brantley, S.L. (XXXX). Using a N
 ## Installation
 
 0. Download this repo as a zip file to your local computer. Unzip the downloaded file.
-1. Make sure all of the dependencies are installaed before running the HNN codes. The list of dependencies is listed below
+1. Make sure all of the dependencies are installed before running the HNN codes. The list of dependencies is listed below
 
 #### Dependencies
 
@@ -26,14 +26,14 @@ Wen, T., Chen, C., Zheng, G., Bandstra, J., and Brantley, S.L. (XXXX). Using a N
 
 ## Get Started
 
-0. Make sure all of above dependencies are installed before running the code
+0. Make sure all of the above dependencies are installed before running the code
 
 1. Specify parameters in the final.py
 Hyperparameters:
 ```
-WHETHER_TRAIN = True  ## Training the model from scratch. If using pre-trained model, please set to False.
+WHETHER_TRAIN = True  ## Training the model from scratch. If using the pre-trained model, please set it to False.
 ONLYBEST = True       ## Only train/test the best performance models ['7a', '7b', '9a', '11a', '11c', '14a','14b']; Set to False if training all models.
-HOME_DIR = "./test"   ## Define the directory where result will be saved.
+HOME_DIR = "./test"   ## Define the directory where the result will be saved.
 ```
 
 2. Input data: Input data is saved in data/all_data.csv
@@ -46,4 +46,4 @@ python final.py
 
 
 ## License
-This work is license under the [MIT license](https://github.com/HANDS-Research-Group/HNN_Soil_Reaction_Front/blob/main/LICENSE).
+This work is licensed under the [MIT license](https://github.com/HANDS-Research-Group/HNN_Soil_Reaction_Front/blob/main/LICENSE).
