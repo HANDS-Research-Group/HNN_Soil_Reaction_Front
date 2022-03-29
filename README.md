@@ -12,7 +12,7 @@ Wen, T., Chen, C., Zheng, G., Bandstra, J., and Brantley, S.L. (XXXX). Using a N
 0. Download this repo as a zip file to your local computer. Unzip the downloaded file.
 1. Make sure all of the dependencies are installaed before running the HNN codes. The list of dependencies is listed below
 
-### Dependencies
+#### Dependencies
 
 | __Required Package__ | __Version__ |
 |----------------------|-------------|
