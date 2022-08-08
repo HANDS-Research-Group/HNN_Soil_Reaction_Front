@@ -3,7 +3,7 @@
 This repo contains source codes, input data, and an example output for the hybrid neural network proposed in the article Wen et al. (2022), which targets improving the accuracy of a physics-based model in simulating soil reaction front using the neural network.
 
 #### Reference
-Wen, T., Chen, C., Zheng, G., Bandstra, J., and Brantley, S.L. (2022). Using a Neural Network – Physics-based Hybrid Model to Predict Soil Reaction Fronts. _Computers & Geosciences_, https://doi.org/XXXXXXX
+Wen, T., Chen, C., Zheng, G., Bandstra, J., and Brantley, S.L. (2022). Using a Neural Network – Physics-based Hybrid Model to Predict Soil Reaction Fronts. _Computers & Geosciences_, https://doi.org/10.1016/j.cageo.2022.105200
 
 
 
